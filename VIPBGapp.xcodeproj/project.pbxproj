@@ -14,6 +14,8 @@
 		38FB844D1D8CA03900D0AD0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38FB844B1D8CA03900D0AD0F /* LaunchScreen.storyboard */; };
 		38FB84581D8CA03900D0AD0F /* VIPBGappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FB84571D8CA03900D0AD0F /* VIPBGappTests.swift */; };
 		38FB84631D8CA03900D0AD0F /* VIPBGappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FB84621D8CA03900D0AD0F /* VIPBGappUITests.swift */; };
+		38FB847C1D8CA31100D0AD0F /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38FB84791D8CA30A00D0AD0F /* ResearchKit.framework */; };
+		38FB847D1D8CA31100D0AD0F /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38FB84791D8CA30A00D0AD0F /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +33,42 @@
 			remoteGlobalIDString = 38FB843E1D8CA03900D0AD0F;
 			remoteInfo = VIPBGapp;
 		};
+		38FB84781D8CA30A00D0AD0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38FB84721D8CA30900D0AD0F /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B183A5951A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+		38FB847A1D8CA30A00D0AD0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38FB84721D8CA30900D0AD0F /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
+			remoteInfo = ResearchKitTests;
+		};
+		38FB847E1D8CA31100D0AD0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38FB84721D8CA30900D0AD0F /* ResearchKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B183A4731A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		38FB84801D8CA31100D0AD0F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				38FB847D1D8CA31100D0AD0F /* ResearchKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		38FB843F1D8CA03900D0AD0F /* VIPBGapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VIPBGapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +84,7 @@
 		38FB845E1D8CA03900D0AD0F /* VIPBGappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VIPBGappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38FB84621D8CA03900D0AD0F /* VIPBGappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPBGappUITests.swift; sourceTree = "<group>"; };
 		38FB84641D8CA03900D0AD0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38FB84721D8CA30900D0AD0F /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ../../../../ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38FB847C1D8CA31100D0AD0F /* ResearchKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +116,7 @@
 		38FB84361D8CA03900D0AD0F = {
 			isa = PBXGroup;
 			children = (
+				38FB84721D8CA30900D0AD0F /* ResearchKit.xcodeproj */,
 				38FB84411D8CA03900D0AD0F /* VIPBGapp */,
 				38FB84561D8CA03900D0AD0F /* VIPBGappTests */,
 				38FB84611D8CA03900D0AD0F /* VIPBGappUITests */,
@@ -125,6 +165,15 @@
 			path = VIPBGappUITests;
 			sourceTree = "<group>";
 		};
+		38FB84731D8CA30900D0AD0F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38FB84791D8CA30A00D0AD0F /* ResearchKit.framework */,
+				38FB847B1D8CA30A00D0AD0F /* ResearchKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,10 +184,12 @@
 				38FB843B1D8CA03900D0AD0F /* Sources */,
 				38FB843C1D8CA03900D0AD0F /* Frameworks */,
 				38FB843D1D8CA03900D0AD0F /* Resources */,
+				38FB84801D8CA31100D0AD0F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				38FB847F1D8CA31100D0AD0F /* PBXTargetDependency */,
 			);
 			name = VIPBGapp;
 			productName = VIPBGapp;
@@ -221,6 +272,12 @@
 			mainGroup = 38FB84361D8CA03900D0AD0F;
 			productRefGroup = 38FB84401D8CA03900D0AD0F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 38FB84731D8CA30900D0AD0F /* Products */;
+					ProjectRef = 38FB84721D8CA30900D0AD0F /* ResearchKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				38FB843E1D8CA03900D0AD0F /* VIPBGapp */,
@@ -229,6 +286,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		38FB84791D8CA30A00D0AD0F /* ResearchKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ResearchKit.framework;
+			remoteRef = 38FB84781D8CA30A00D0AD0F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		38FB847B1D8CA30A00D0AD0F /* ResearchKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ResearchKitTests.xctest;
+			remoteRef = 38FB847A1D8CA30A00D0AD0F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		38FB843D1D8CA03900D0AD0F /* Resources */ = {
@@ -295,6 +369,11 @@
 			isa = PBXTargetDependency;
 			target = 38FB843E1D8CA03900D0AD0F /* VIPBGapp */;
 			targetProxy = 38FB845F1D8CA03900D0AD0F /* PBXContainerItemProxy */;
+		};
+		38FB847F1D8CA31100D0AD0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ResearchKit;
+			targetProxy = 38FB847E1D8CA31100D0AD0F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -412,6 +491,7 @@
 		38FB84681D8CA03900D0AD0F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E3NT7UTBQT;
 				INFOPLIST_FILE = VIPBGapp/Info.plist;
@@ -425,6 +505,7 @@
 		38FB84691D8CA03900D0AD0F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E3NT7UTBQT;
 				INFOPLIST_FILE = VIPBGapp/Info.plist;
