@@ -8,8 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+extension UIViewController: ORKTaskViewControllerDelegate {
+    func taskViewController(taskViewController: ORKTaskViewController, didFinishWithReason reason:ORKTaskViewControllerFinishReason, error: NSError?){taskViewController.result
+        taskViewController.dismissViewControllerAnimated(true, completion: nil)
+    }
+}
 
+class ViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
