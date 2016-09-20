@@ -7,10 +7,12 @@
 //
 
 import Foundation
+import UIKit
+import ResearchKit
 
-class WithdrawalController: ORKTaskViewController {
+class WithdrawViewController: ORKTaskViewController {
     init() {
-        let instructionStep = ORKInstructionStep(identifier: "WithdrawlInstruction")
+        let instructionStep = ORKInstructionStep(identifier: "WithdrawalInstruction")
         instructionStep.title = NSLocalizedString("Are you sure you want to withdraw?", comment: "")
         instructionStep.text = NSLocalizedString("Withdrawing from the study will reset the app to the state it was in prior to you originally joining the study.  Since your data is anonymous we are not able to delete data that you have provided.", comment: "")
         
@@ -20,7 +22,7 @@ class WithdrawalController: ORKTaskViewController {
         
         let withdrawTask = ORKOrderedTask(identifier: "Withdraw", steps: [instructionStep, completionStep])
         
-        super.init(task: withdrawTask, taskRunUUID: nil)
+        super.init(task: withdrawTask, taskRun: nil)
     }
     
     required init(coder aDecoder: NSCoder) {

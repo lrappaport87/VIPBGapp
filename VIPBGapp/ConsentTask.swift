@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ResearchKit
 
 public var ConsentTask: ORKOrderedTask {
     var steps = [ORKStep]()
@@ -26,7 +27,7 @@ public var ConsentTask: ORKOrderedTask {
     let signature = consentDocument.signatures!.first
     
     
-    let consentReviewStep = ORKConsentReviewStep(identifier: "consentReview", signature: signature, inDocument: consentDocument)
+    let consentReviewStep = ORKConsentReviewStep(identifier: "consentReview", signature: signature, in: consentDocument)
     
     consentReviewStep.text = "Please enter your name.  This will be kept separate from the data you provide in this study."
     consentReviewStep.reasonForConsent = "Please indicate whether you agree to participate."

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ResearchKit
 
 public var moodTask: ORKTask {
     
@@ -17,39 +18,39 @@ public var moodTask: ORKTask {
     instructionStep.text = NSLocalizedString("How do you feel?", comment: "")
     
     // Question Steps
-    let WorriedAnswerFormat = ORKAnswerFormat.scaleAnswerFormatWithMaximumValue(6, minimumValue: 0, defaultValue: -9, step: 1, vertical: false, maximumValueDescription: "Extremely", minimumValueDescription: "Not at all")
+    let WorriedAnswerFormat = ORKAnswerFormat.scale(withMaximumValue: 6, minimumValue: 0, defaultValue: -9, step: 1, vertical: false, maximumValueDescription: "Extremely", minimumValueDescription: "Not at all")
     let WorriedQuestionStepTitle = "Worried/Anxious"
     let WorriedQuestionStep = ORKQuestionStep(identifier: "WorriedQuestionStep", title: WorriedQuestionStepTitle, answer: WorriedAnswerFormat)
     let WorriedResult = ORKScaleQuestionResult(identifier: "WorriedAnswerFormat")
     print(WorriedResult)
     
-    let HappyAnswerFormat = ORKAnswerFormat.scaleAnswerFormatWithMaximumValue(6, minimumValue: 0, defaultValue: -9, step: 1, vertical: false, maximumValueDescription: "Extremely", minimumValueDescription: "Not at all")
+    let HappyAnswerFormat = ORKAnswerFormat.scale(withMaximumValue: 6, minimumValue: 0, defaultValue: -9, step: 1, vertical: false, maximumValueDescription: "Extremely", minimumValueDescription: "Not at all")
     let HappyQuestionStepTitle = "Happy"
     let HappyQuestionStep = ORKQuestionStep(identifier: "HappyQuestionStep", title: HappyQuestionStepTitle, answer: HappyAnswerFormat)
     
-    let FrustratedAnswerFormat = ORKAnswerFormat.scaleAnswerFormatWithMaximumValue(6, minimumValue: 0, defaultValue: -9, step: 1, vertical: false, maximumValueDescription: "Extremely", minimumValueDescription: "Not at all")
+    let FrustratedAnswerFormat = ORKAnswerFormat.scale(withMaximumValue: 6, minimumValue: 0, defaultValue: -9, step: 1, vertical: false, maximumValueDescription: "Extremely", minimumValueDescription: "Not at all")
     let FrustratedQuestionStepTitle = "Frustrated"
     let FrustratedQuestionStep = ORKQuestionStep(identifier: "FrustratedQuestionStep", title: FrustratedQuestionStepTitle, answer: FrustratedAnswerFormat)
     
-    let PleasedAnswerFormat = ORKAnswerFormat.scaleAnswerFormatWithMaximumValue(6, minimumValue: 0, defaultValue: -9, step: 1, vertical: false, maximumValueDescription: "Extremely", minimumValueDescription: "Not at all")
+    let PleasedAnswerFormat = ORKAnswerFormat.scale(withMaximumValue: 6, minimumValue: 0, defaultValue: -9, step: 1, vertical: false, maximumValueDescription: "Extremely", minimumValueDescription: "Not at all")
     let PleasedQuestionStepTitle = "Pleased"
     let PleasedQuestionStep = ORKQuestionStep(identifier: "PleasedQuestionStep", title: PleasedQuestionStepTitle, answer: PleasedAnswerFormat)
     
-    let AngryAnswerFormat = ORKAnswerFormat.scaleAnswerFormatWithMaximumValue(6, minimumValue: 0, defaultValue: -9, step: 1, vertical: false, maximumValueDescription: "Extremely", minimumValueDescription: "Not at all")
+    let AngryAnswerFormat = ORKAnswerFormat.scale(withMaximumValue: 6, minimumValue: 0, defaultValue: -9, step: 1, vertical: false, maximumValueDescription: "Extremely", minimumValueDescription: "Not at all")
     let AngryQuestionStepTitle = "Angry/Hostile"
     let AngryQuestionStep = ORKQuestionStep(identifier: "AngryQuestionStep", title: AngryQuestionStepTitle, answer: AngryAnswerFormat)
     
-    let FunAnswerFormat = ORKAnswerFormat.scaleAnswerFormatWithMaximumValue(6, minimumValue: 0, defaultValue: -9, step: 1, vertical: false, maximumValueDescription: "Extremely", minimumValueDescription: "Not at all")
+    let FunAnswerFormat = ORKAnswerFormat.scale(withMaximumValue: 6, minimumValue: 0, defaultValue: -9, step: 1, vertical: false, maximumValueDescription: "Extremely", minimumValueDescription: "Not at all")
     let FunQuestionStepTitle = "Enjoyment/Fun"
     let FunQuestionStep = ORKQuestionStep(identifier: "FunQuestionStep", title: FunQuestionStepTitle, answer: FunAnswerFormat)
     
-    let UnhappyAnswerFormat = ORKAnswerFormat.scaleAnswerFormatWithMaximumValue(6, minimumValue: 0, defaultValue: -9, step: 1, vertical: false, maximumValueDescription: "Extremely", minimumValueDescription: "Not at all")
+    let UnhappyAnswerFormat = ORKAnswerFormat.scale(withMaximumValue: 6, minimumValue: 0, defaultValue: -9, step: 1, vertical: false, maximumValueDescription: "Extremely", minimumValueDescription: "Not at all")
     let UnhappyQuestionStep = ORKQuestionStep(identifier: "UnhappyQuestionStep", title: "Unhappy", answer: UnhappyAnswerFormat)
     
-    let JoyAnswerFormat = ORKAnswerFormat.scaleAnswerFormatWithMaximumValue(6, minimumValue: 0, defaultValue: -9, step: 1, vertical: false, maximumValueDescription: "Extremely", minimumValueDescription: "Not at all")
+    let JoyAnswerFormat = ORKAnswerFormat.scale(withMaximumValue: 6, minimumValue: 0, defaultValue: -9, step: 1, vertical: false, maximumValueDescription: "Extremely", minimumValueDescription: "Not at all")
     let JoyQuestionStep = ORKQuestionStep(identifier: "JoyQuestionStep", title: "Joyful", answer: JoyAnswerFormat)
     
-    let BlueAnswerFormat = ORKAnswerFormat.scaleAnswerFormatWithMaximumValue(6, minimumValue: 0, defaultValue: -9, step: 1, vertical: false, maximumValueDescription: "Extremely", minimumValueDescription: "Not at all")
+    let BlueAnswerFormat = ORKAnswerFormat.scale(withMaximumValue: 6, minimumValue: 0, defaultValue: -9, step: 1, vertical: false, maximumValueDescription: "Extremely", minimumValueDescription: "Not at all")
     let BlueQuestionStep = ORKQuestionStep(identifier: "BlueQuestionStep", title: "Depressed/Blue", answer: BlueAnswerFormat)
     
     
